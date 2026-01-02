@@ -688,9 +688,16 @@ h1 {
 
 /* Smooth scrolling animation */
 .st-row-wrapper {
-  scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
+.st-row-track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+}
 
 .st-card:hover img {
   transform: scale(1.08);
@@ -1932,4 +1939,86 @@ nav {
     margin-bottom: 12px;
   }
 
+}
+/* ================= MOBILE SCROLL FIX ================= */
+
+/* Allow vertical scroll on event page */
+html, body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Event page must scroll */
+.events-page,
+.events-page main {
+  height: auto;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+/* Mobile specific */
+@media (max-width: 768px) {
+  body {
+    overflow-y: auto !important;
+    position: relative;
+  }
+
+  .st-row-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+/* ================= TOUCH SCROLL FIX ================= */
+
+/* Enable normal vertical scrolling */
+html, body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Event rows — TOUCH ENABLED */
+.st-row-wrapper {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch; /* iOS fix */
+  scroll-snap-type: x mandatory;
+}
+
+/* Horizontal row content */
+.st-row-track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+}
+
+/* Each card snaps nicely */
+.st-card {
+  scroll-snap-align: start;
+}
+
+/* Mobile only */
+@media (max-width: 768px) {
+  .st-row-wrapper {
+    padding-bottom: 12px;
+  }
+}
+/* ================= EVENTS PAGE SCROLL FIX ================= */
+
+.events-page {
+  overflow-y: auto;
+}
+
+.events-page .st-row-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.events-page .st-row-track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
 }
