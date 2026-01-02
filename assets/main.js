@@ -410,5 +410,16 @@ form.submit();
   }
 });
 function enterUpsideDown() {
-  window.location.href = "events.html";
+
+  localStorage.setItem("playClock", "true");
+
+  clockSound.currentTime = 0;
+  clockSound.play().catch(() => {});
+
+  // ✅ FIXED TARGET
+  document.querySelector("main").classList.add("upside-down");
+
+  setTimeout(() => {
+    window.location.href = "events.html";
+  }, 1800);
 }
