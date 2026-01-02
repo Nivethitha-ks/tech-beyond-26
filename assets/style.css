@@ -1933,57 +1933,53 @@ nav {
   }
 
 }
-/* ================= NUCLEAR MOBILE SCROLL FIX ================= */
+/* =========================================================
+   🔥 FINAL SCROLL UNLOCK FIX – EVENTS PAGE
+   DO NOT REMOVE – DO NOT MODIFY ABOVE CODE
+   ========================================================= */
 
-/* Force browser scrolling back */
+/* 1️⃣ Force page scrolling */
 html, body {
   height: auto !important;
-  min-height: 100% !important;
   overflow-y: auto !important;
-  overflow-x: hidden !important;
-  position: static !important;
-  touch-action: pan-y pan-x !important;
+  -webkit-overflow-scrolling: touch;
 }
 
-/* Disable transform lock */
-body, main {
-  transform: none !important;
-  filter: none !important;
+/* 2️⃣ Disable scroll blocking overlays */
+body::after,
+.video-bg,
+.video-bg::after {
+  pointer-events: none !important;
 }
 
-/* EVENTS PAGE – ENABLE SCROLL */
-.events-page {
-  height: auto !important;
-  min-height: 100vh !important;
-  overflow-y: auto !important;
-  position: static !important;
+/* 3️⃣ Unlock Events page vertical scroll */
+section,
+main {
+  position: relative !important;
+  overflow: visible !important;
 }
 
-/* Event cards row */
-.events-page .st-row-wrapper {
+/* 4️⃣ FIX event list scrolling */
+.st-row-wrapper {
   overflow-x: auto !important;
-  overflow-y: hidden !important;
-  -webkit-overflow-scrolling: touch !important;
-  touch-action: pan-x !important;
+  overflow-y: visible !important;
+  touch-action: pan-x pan-y;
 }
 
-/* Horizontal track */
-.events-page .st-row-track {
-  display: flex !important;
-  width: max-content !important;
-}
-
-/* Cards must not block touch */
-.st-card {
-  pointer-events: auto !important;
-}
-
-/* Mobile only */
+/* 5️⃣ Mobile-specific hard unlock */
 @media (max-width: 768px) {
-  * {
-    -webkit-tap-highlight-color: transparent;
+  body {
+    position: static !important;
+    overflow-y: auto !important;
+  }
+
+  .hero {
+    height: auto !important;
+    min-height: unset !important;
+  }
+
+  section {
+    min-height: auto !important;
   }
 }
-.events-page main.upside-down {
-  animation: none !important;
-}
+
