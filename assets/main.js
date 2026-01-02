@@ -1,44 +1,48 @@
-/* =========================================================
-   MAIN.JS – CLEAN & ERROR-FREE (STRANGER THINGS THEME)
-   ========================================================= */
-
 document.addEventListener("DOMContentLoaded", () => {
 
   /* ================= COUNTDOWN TIMER ================= */
-   const countdownEl = document.getElementById("countdown");
-
+  const countdownEl = document.getElementById("countdown");
   if (countdownEl) {
     const eventDate = new Date("2026-02-28T23:59:59").getTime();
-
     setInterval(() => {
-      const now = Date.now();
-      const diff = eventDate - now;
-
-      if (diff <= 0) {
-        countdownEl.textContent = "EVENT LIVE!";
-        return;
-      }
-
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-      const minutes = Math.floor((diff / (1000 * 60)) % 60);
-      const seconds = Math.floor((diff / 1000) % 60);
-
-      countdownEl.textContent =
-        `${days}d ${hours}h ${minutes}m ${seconds}s`;
+      const diff = eventDate - Date.now();
+      if (diff <= 0) return countdownEl.textContent = "EVENT LIVE!";
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const m = Math.floor((diff / (1000 * 60)) % 60);
+      const s = Math.floor((diff / 1000) % 60);
+      countdownEl.textContent = `${d}d ${h}h ${m}m ${s}s`;
     }, 1000);
   }
 
-  window.addEventListener("load", () => {
-document.querySelectorAll(
+  /* ================= REVEAL EFFECT ================= */
+  document.querySelectorAll(
     ".reveal-logo, .reveal-title, .reveal-tagline, .reveal-countdown"
   ).forEach((el, i) => {
-    setTimeout(() => {
-      el.classList.add("visible");
-    }, i * 250);
+    setTimeout(() => el.classList.add("visible"), i * 250);
   });
+
+  /* ================= SPORES ================= */
+  let activeSpores = 0;
+  const MAX_SPORES = 35;
+
+  function createSpore() {
+    if (activeSpores >= MAX_SPORES) return;
+    activeSpores++;
+    const spore = document.createElement("div");
+    spore.className = "spore";
+    spore.style.left = Math.random() * 100 + "vw";
+    spore.style.animationDuration = 10 + Math.random() * 10 + "s";
+    document.body.appendChild(spore);
+    setTimeout(() => {
+      spore.remove();
+      activeSpores--;
+    }, 20000);
+  }
+
+  let sporeInterval = setInterval(createSpore, 600);
 });
-  
+
 
 
   /* ================= HERO FADE-IN ================= */
@@ -75,7 +79,7 @@ let sporeInterval=setInterval(createSpore, 600);
 
   /* ================= NETFLIX STYLE ROW SCROLL ================= */
   
-  });
+
 
 
 /* ================= STRANGER THINGS LIGHTNING ================= */
