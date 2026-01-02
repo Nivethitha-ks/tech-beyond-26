@@ -687,8 +687,21 @@ h1 {
 }
 
 /* Smooth scrolling animation */
+/* ================= EVENT ROW SCROLL FIX ================= */
+
 .st-row-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
+}
+
+/* Hide scrollbar visually but keep scrolling */
+.st-row-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.st-row-wrapper {
+  scrollbar-width: none;
 }
 
 
