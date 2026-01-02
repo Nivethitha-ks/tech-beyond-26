@@ -2139,57 +2139,46 @@ body {
 }
 
 /* =========================================================
-   📱 REAL PHONE TEXT OVERLAP KILLER (FINAL)
+   📱 FINAL MOBILE FIX — STOP OVERLAP FOREVER
    ========================================================= */
 @media (max-width: 768px) {
 
-  /* 1️⃣ STOP ALL PARENT TRANSFORMS THAT BREAK TEXT */
+  /* 1️⃣ KEEP GLITCH FOR HEADINGS ONLY */
+  h1 .glitch,
+  h2 .glitch,
+  h3 .glitch {
+    display: inline-block;
+  }
+
+  /* 2️⃣ DISABLE GLITCH INSIDE PARAGRAPHS (CRITICAL) */
+  p .glitch,
+  .event-cache .glitch {
+    animation: none !important;
+    text-shadow: none !important;
+  }
+
+  p .glitch::before,
+  p .glitch::after,
+  .event-cache .glitch::before,
+  .event-cache .glitch::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  /* 3️⃣ TEXT SAFETY */
+  p,
+  .event-cache {
+    line-height: 1.85 !important;
+    letter-spacing: 0.4px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* 4️⃣ KILL TRANSFORMS THAT BREAK TEXT */
   #world,
   .safe-zoom,
-  .upside-down,
-  section,
-  main {
+  .upside-down {
     transform: none !important;
     animation: none !important;
-    filter: none !important;
-  }
-
-  /* 2️⃣ KEEP GLITCH BUT MAKE IT FLOW-SAFE */
-  .glitch {
-    display: inline-block;
-    position: relative;
-    white-space: normal;
-
-    line-height: 1.9 !important;
-    letter-spacing: 0.4px !important;
-  }
-
-  /* 3️⃣ ALIGN GLITCH LAYERS PERFECTLY */
-  .glitch::before,
-  .glitch::after {
-    position: absolute;
-    inset: 0;
-    line-height: 1.9 !important;
-  }
-
-  /* 4️⃣ FORCE TEXT LAYOUT STABILITY */
-  p,
-  span,
-  li,
-  .event-cache,
-  .hero-tagline {
-    transform: none !important;
-    animation: none !important;
-
-    line-height: 1.85 !important;
-    word-break: normal !important;
-    overflow-wrap: break-word !important;
-  }
-
-  /* 5️⃣ GPU RASTER FIX (CRITICAL) */
-  * {
-    backface-visibility: hidden;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
   }
 }
