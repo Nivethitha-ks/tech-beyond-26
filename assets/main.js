@@ -424,3 +424,14 @@ function enterUpsideDown() {
     window.location.href = "events.html";
   }, 900);
 }
+function triggerUpsideDown() {
+  const world = document.getElementById("world");
+  if (!world) return;
+
+  world.classList.add("upside-down");
+
+  // remove after animation ends
+  setTimeout(() => {
+    world.classList.remove("upside-down");
+  }, 1700);
+}
