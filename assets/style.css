@@ -2183,43 +2183,123 @@ body {
   }
 }
 /* =========================================================
-   📱 MOBILE SAFE GLITCH — BLUE GLOW (NO OVERLAP)
+   📱 MOBILE FIX – TECHNICAL EVENTS TEXT VISIBILITY
    ========================================================= */
 @media (max-width: 768px) {
 
-  /* Allow glitch color but remove ghost layers */
-  .glitch {
-    animation: mobileGlow 2.8s ease-in-out infinite;
+  /* Wrap technical/non-technical text in readable layer */
+  .event-cache {
+    background: rgba(0, 0, 0, 0.55);   /* 🔑 contrast */
+    padding: 18px 16px;
+    border-radius: 10px;
+
+    box-shadow:
+      0 0 18px rgba(229, 9, 20, 0.45),
+      inset 0 0 12px rgba(0, 0, 0, 0.8);
+
+    color: #ff4a4a;   /* brighter red for mobile */
+  }
+
+  /* Heading visibility */
+  .event-heading {
+    color: #ff2a2a;
     text-shadow:
-      0 0 6px rgba(0, 229, 255, 0.55),
-      0 0 14px rgba(0, 229, 255, 0.35);
+      0 0 10px rgba(255, 40, 40, 0.8),
+      0 0 22px rgba(180, 0, 0, 0.6);
   }
 
-  /* Kill duplicate layers completely */
-  .glitch::before,
-  .glitch::after {
+  /* Paragraph safety */
+  .event-cache p {
+    opacity: 0.95;
+  }
+}
+/* =========================================================
+   📱 MOBILE — KEYWORDS ONLY: RED ↔ BLUE COLOR FLICKER
+   (Works with existing .glitch HTML)
+   ========================================================= */
+@media (max-width: 768px) {
+
+  /* TARGET ONLY glitch keywords inside event text */
+  .event-cache .glitch {
+    animation: mobileKeywordFlicker 1s ease-in-out infinite;
+    font-weight: 600;
+  }
+
+  /* Disable glitch layers on mobile (prevents overlap) */
+  .event-cache .glitch::before,
+  .event-cache .glitch::after {
     display: none !important;
+    content: none !important;
   }
 
-  /* Soft glow animation */
-  @keyframes mobileGlow {
+  /* Color-only flicker animation */
+  @keyframes mobileKeywordFlicker {
     0% {
-      opacity: 1;
-      text-shadow:
-        0 0 4px rgba(0, 229, 255, 0.3),
-        0 0 10px rgba(0, 229, 255, 0.2);
+      color: #ff2a2a; /* Stranger Things red */
+      text-shadow: none;
     }
-    50% {
-      opacity: 0.9;
+    45% {
+      color: #ff2a2a;
+    }
+    55% {
+      color: #00e5ff; /* Upside Down blue */
       text-shadow:
-        0 0 8px rgba(0, 229, 255, 0.6),
-        0 0 18px rgba(0, 229, 255, 0.4);
+        0 0 6px rgba(0, 229, 255, 0.6),
+        0 0 14px rgba(0, 229, 255, 0.35);
+    }
+    65% {
+      color: #ff2a2a;
+      text-shadow: none;
     }
     100% {
-      opacity: 1;
-      text-shadow:
-        0 0 4px rgba(0, 229, 255, 0.3),
-        0 0 10px rgba(0, 229, 255, 0.2);
+      color: #ff2a2a;
     }
   }
 }
+/* =========================================================
+   📱 MOBILE – KEYWORDS BLUE FLICKER (ALL PARAGRAPHS)
+   ========================================================= */
+@media (max-width: 768px) {
+
+  /* Re-enable flicker ONLY for keyword spans */
+  p .glitch,
+  .event-cache .glitch {
+    animation: mobileKeywordBlue 1.4s ease-in-out infinite !important;
+    font-weight: 600;
+  }
+
+  /* Kill ghost layers (prevents overlap) */
+  p .glitch::before,
+  p .glitch::after,
+  .event-cache .glitch::before,
+  .event-cache .glitch::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  /* Red → Blue → Red color flicker */
+  @keyframes mobileKeywordBlue {
+    0% {
+      color: #ff2a2a;
+      text-shadow: none;
+    }
+    45% {
+      color: #ff2a2a;
+    }
+    55% {
+      color: #00e5ff;
+      text-shadow:
+        0 0 6px rgba(0, 229, 255, 0.6),
+        0 0 14px rgba(0, 229, 255, 0.35);
+    }
+    65% {
+      color: #ff2a2a;
+      text-shadow: none;
+    }
+    100% {
+      color: #ff2a2a;
+    }
+  }
+}
+
+
