@@ -117,19 +117,19 @@ a {
 }
 
 .hamburger span {
-  height: 3px;
+  height: 2.5px;
   width: 100%;
   background: #fff;
   border-radius: 3px;
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
-  transition: all 0.3s ease;
+  box-shadow: 0 0 6px rgba(255, 0, 0, 0.7);
+  transition: 0.3s ease;
 }
 
 /* MOBILE MENU */
 .mobile-menu {
   position: fixed;
   top: 60px;
-  right: -100%;
+  right: -260%;
   width: 240px;
   height: calc(100vh - 60px);
   background: rgba(0,0,0,0.95);
@@ -155,7 +155,7 @@ a {
 
 /* HAMBURGER ANIMATION */
 .hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translateY(9px);
+  transform: rotate(45deg) translateY(7px);
 }
 
 .hamburger.active span:nth-child(2) {
@@ -163,7 +163,11 @@ a {
 }
 
 .hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translateY(-9px);
+  transform: rotate(-45deg) translateY(-7px);
+}
+/* SHOW MENU */
+.mobile-menu.active {
+  right: 0;
 }
 
 /* DESKTOP */
