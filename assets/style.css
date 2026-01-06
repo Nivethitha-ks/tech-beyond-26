@@ -518,6 +518,81 @@ body::after {
   font-size: 3.8rem;
 }
 
+.contact-strip {
+  margin: 80px auto 40px;
+  padding: 30px 20px;
+  max-width: 1100px;
+
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  background: linear-gradient(
+    to right,
+    rgba(255, 40, 40, 0.12),
+    rgba(0, 0, 0, 0.6)
+  );
+
+  border: 1px solid rgba(255, 42, 42, 0.4);
+  box-shadow: 0 0 30px rgba(229, 9, 20, 0.4);
+  backdrop-filter: blur(6px);
+}
+
+.contact-block h3 {
+  color: #ff2a2a;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+  text-align: center;
+  text-shadow: 0 0 12px rgba(255, 42, 42, 0.6);
+}
+
+.contact-person {
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.contact-person .name {
+  display: block;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.contact-person .role {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.phone-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  color: #fff;
+  font-size: 0.95rem;
+  text-decoration: none;
+
+  padding: 6px 10px;
+  border: 1px solid rgba(255, 42, 42, 0.6);
+  border-radius: 4px;
+
+  box-shadow: 0 0 10px rgba(255, 42, 42, 0.4);
+  transition: all 0.3s ease;
+}
+
+.phone-link:hover {
+  background: rgba(255, 42, 42, 0.2);
+  box-shadow: 0 0 20px rgba(255, 42, 42, 0.9);
+  transform: scale(1.05);
+}
+
+/* Mobile friendly */
+@media (max-width: 768px) {
+  .contact-strip {
+    gap: 30px;
+  }
+}
 
 
 /* ================= SECTIONS ================= */
