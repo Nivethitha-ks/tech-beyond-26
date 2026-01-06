@@ -437,9 +437,18 @@ function triggerUpsideDown() {
 }
 
 const hamburger = document.getElementById("hamburger");
-const navLinks = document.querySelector(".nav-links");
+const mobileMenu = document.getElementById("mobileMenu");
 
 hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-  hamburger.classList.toggle("open");
+  hamburger.classList.toggle("active");
+  mobileMenu.classList.toggle("active");
 });
+
+/* Close menu when link clicked */
+document.querySelectorAll(".mobile-menu a").forEach(link => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    mobileMenu.classList.remove("active");
+  });
+});
+
