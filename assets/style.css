@@ -84,6 +84,7 @@ a {
 /* ================= NAVBAR ================= */
 /* NAV WRAPPER */
 .st-nav {
+  position: fixed;
   top: 18px;
   width: 100%;
   z-index: 1000;
