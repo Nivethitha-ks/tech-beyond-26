@@ -16,14 +16,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ================= REVEAL EFFECT ================= */
-  document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(
+ window.addEventListener("load", () => {
+document.querySelectorAll(
     ".reveal-logo, .reveal-title, .reveal-tagline, .reveal-countdown"
-  ).forEach(el => {
-    el.classList.add("visible");
+  ).forEach((el, i) => {
+    setTimeout(() => {
+      el.classList.add("visible");
+    }, i * 250);
   });
-});
-
+}); 
   /* ================= HERO FADE-IN ================= */
   const title = document.querySelector(".fade-title");
   if (title) {
