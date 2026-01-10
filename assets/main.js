@@ -305,7 +305,7 @@ document.getElementById("stLoader").classList.add("active");
 
 
   const SCRIPT_URL =
-    "https://script.google.com/macros/s/AKfycbyD-ayQT_gAuQt4QWDo-cgZ4PGXF8yf7WUAtCD-CPaZhekGk5xM1w7Bs_PkacBhwK-h/exec";
+    "https://script.google.com/macros/s/AKfycbwkG31mx2gbguI0MvmkuQO_pqjtUUToXq9ukpVPL49YAr2inVEFVumkA6bndVb8rX4P/exec";
 
   const surprise = document.getElementById("surpriseEvent");
   surprise.value = surprise.checked ? "YES" : "NO";
