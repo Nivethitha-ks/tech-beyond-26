@@ -4,23 +4,53 @@
   <meta charset="UTF-8">
   <title>AD Dimension</title>
   <link rel="stylesheet" href="../assets/event.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body class="AD-bg">
 
-<nav>
-  <strong>
-    <div class="nav-logo">
-      <img src="../assets/logo-removebg-preview.png">
+<nav class="st-nav">
+  <div class="st-nav-inner">
+
+    <!-- Logo -->
+    <div class="st-logo">
+      <img src="../assets/logo-removebg-preview.png" alt="VEC Logo">
     </div>
-  </strong>
-  <div>
-    <a href="../index.html">Home</a>
-    <a href="../events.html">Events</a>
+
+    <!-- Menu -->
+    <ul class="st-menu">
+      <li><a href="../index.html" class="active">Home</a></li>
+      <li><a href="../events.html">Event</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+
   </div>
 </nav>
 
 <section class="event-container">
+  <div class="coordinator-card">
+
+  <h3 class="coord-title">EVENT COORDINATORS</h3>
+
+  <div class="coord-list">
+
+    <div class="coord-item">
+      <span class="coord-name">Ms Keerthna MP</span>
+      <a href="tel:+917200347623" aria-label="Call Ms Keerthna MP">
+        <i class="fas fa-phone coord-icon"></i>
+      </a>
+    </div>
+
+    <div class="coord-item">
+      <span class="coord-name">Ms Divya V</span>
+      <a href="tel:+919566831417" aria-label="Call Ms Divya V">
+        <i class="fas fa-phone coord-icon"></i>
+      </a>
+    </div>
+
+  </div>
+
+</div>
 
   <h2>🎤 Creative Pitch</h2>
 
@@ -73,12 +103,16 @@
     <li>Judges’ decision is final</li>
   </ul>
 
-  <a href="../register.html">
-    <button class="register-btn">Register for this Event</button>
-  </a>
+  <div class="nav-buttons">
+    <a href="sight.html">
+      <button class="register-btn">← Previous</button>
+    </a>
+    <a href="vision.html">
+      <button class="register-btn">Next →</button>
+    </a>
+  </div>
 
 </section>
-<div id="lightning-container"></div>
 <script defer src="../assets/main.js"></script>
 </body>
 </html>

@@ -4,22 +4,52 @@
   <title>Mind Flayer Hackathon</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../assets/event.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body class="hackathon-bg">
 
-<nav>
-  <strong>
-    <div class="nav-logo">
-      <img src="../assets/logo-removebg-preview.png">
+<nav class="st-nav">
+  <div class="st-nav-inner">
+
+    <!-- Logo -->
+    <div class="st-logo">
+      <img src="../assets/logo-removebg-preview.png" alt="VEC Logo">
     </div>
-  </strong>
-  <div>
-    <a href="../index.html">Home</a>
-    <a href="../events.html">Events</a>
+
+    <!-- Menu -->
+    <ul class="st-menu">
+      <li><a href="../index.html" class="active">Home</a></li>
+      <li><a href="../events.html">Event</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+
   </div>
 </nav>
 
 <section class="event-container">
+  <div class="coordinator-card">
+
+  <h3 class="coord-title">EVENT COORDINATORS</h3>
+
+  <div class="coord-list">
+
+    <div class="coord-item">
+      <span class="coord-name">Mr Yuvan Vijay</span>
+      <a href="tel:+916382480228" aria-label="Call Mr Yuvan Vijay">
+        <i class="fas fa-phone coord-icon"></i>
+      </a>
+    </div>
+
+    <div class="coord-item">
+      <span class="coord-name">Ms Sindhuja M</span>
+      <a href="tel:+917010649347" aria-label="Call Ms Sindhuja M">
+        <i class="fas fa-phone coord-icon"></i>
+      </a>
+    </div>
+
+  </div>
+
+</div>
 
   <h2>💻 Hackathon</h2>
 
@@ -38,7 +68,7 @@
       <div class="event-section">
         <h3> Event Description</h3>
         <p>
-          Hackathon is a competitive team-based coding event designed to test problem-solving skills, innovation, and collaboration. Teams progress through an elimination round before entering an intense final phase where they develop and present solutions to a given problem statement.
+          Each team can consist of 1 to 3 members.The event will take place from 9:30 AM to 1:30 PM.The problem statement will be provided on the spot.Participants must bring their own laptops.Ethernet connectivity will be provided.
         </p>
       </div>
 
@@ -68,12 +98,16 @@
     <li>Judges’ decision is final</li>
   </ul>
 
-  <a href="../register.html">
-    <button class="register-btn">Register for this Event</button>
-  </a>
+  <div class="nav-buttons">
+    <a href="archives.html">
+      <button class="register-btn">← Previous</button>
+    </a>
+    <a href="upsidedebug.html">
+      <button class="register-btn">Next →</button>
+    </a>
+  </div>
 
 </section>
-<div id="lightning-container"></div>
 <script defer src="../assets/main.js"></script>
 </body>
 </html>

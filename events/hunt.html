@@ -4,22 +4,52 @@
   <title>Hunt For 011</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../assets/event.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body class="hunt-bg">
 
-<nav>
-  <strong>
-    <div class="nav-logo">
-      <img src="../assets/logo-removebg-preview.png">
+<nav class="st-nav">
+  <div class="st-nav-inner">
+
+    <!-- Logo -->
+    <div class="st-logo">
+      <img src="../assets/logo-removebg-preview.png" alt="VEC Logo">
     </div>
-  </strong>
-  <div>
-    <a href="../index.html">Home</a>
-    <a href="../events.html">Events</a>
+
+    <!-- Menu -->
+    <ul class="st-menu">
+      <li><a href="../index.html" class="active">Home</a></li>
+      <li><a href="../events.html">Event</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+
   </div>
 </nav>
 
 <section class="event-container">
+  <div class="coordinator-card">
+
+  <h3 class="coord-title">EVENT COORDINATORS</h3>
+
+  <div class="coord-list">
+
+    <div class="coord-item">
+      <span class="coord-name">Mr Sivaramakrishnan R</span>
+      <a href="tel:+919080039068" aria-label="Call Mr Sivaramakrishnan R">
+        <i class="fas fa-phone coord-icon"></i>
+      </a>
+    </div>
+
+    <div class="coord-item">
+      <span class="coord-name">Ms Shalini N</span>
+      <a href="tel:+919865471441" aria-label="Call Ms Shalini N">
+        <i class="fas fa-phone coord-icon"></i>
+      </a>
+    </div>
+
+  </div>
+
+</div>
 
   <h2>🗺️ Treasure Hunt</h2>
 
@@ -66,12 +96,13 @@
     <li>Decision of the organizers is final</li>
   </ul>
 
-  <a href="../register.html">
-    <button class="register-btn">Register for this Event</button>
-  </a>
+  <div class="nav-buttons">
+        <a href="vecna.html">
+          <button class="register-btn">Next →</button>
+        </a>
+      </div>
 
 </section>
-<div id="lightning-container"></div>
 <script defer src="../assets/main.js"></script>
 </body>
 </html>

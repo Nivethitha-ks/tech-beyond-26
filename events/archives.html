@@ -4,24 +4,53 @@
   <title>Stranger Archives</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../assets/event.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body class="archive-bg">
-<body class="eleven-bg">
-    <nav>
-      <strong>
-        <div class="nav-logo">
-          <img src="../assets/logo-removebg-preview.png">
-        </div>
-      </strong>
-      <div>
-        <a href="../index.html">Home</a>
-        <a href="../events.html">Events</a>
-      </div>
-    </nav>
+    <nav class="st-nav">
+  <div class="st-nav-inner">
+
+    <!-- Logo -->
+    <div class="st-logo">
+      <img src="../assets/logo-removebg-preview.png" alt="VEC Logo">
+    </div>
+
+    <!-- Menu -->
+    <ul class="st-menu">
+      <li><a href="../index.html" class="active">Home</a></li>
+      <li><a href="../events.html">Event</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+
+  </div>
+</nav>
 
     <section class="event-container">
-      <h2>Paper Presentation</h2>
+      <div class="coordinator-card">
 
+  <h3 class="coord-title">EVENT COORDINATORS</h3>
+
+  <div class="coord-list">
+
+    <div class="coord-item">
+      <span class="coord-name">Ms Ahil M</span>
+      <a href="tel:+918610819360" aria-label="Call Ms Ahil M">
+        <i class="fas fa-phone coord-icon"></i>
+      </a>
+    </div>
+
+    <div class="coord-item">
+      <span class="coord-name">Mr Siddharth V</span>
+      <a href="tel:+919345741382" aria-label="Call Mr Siddharth V">
+        <i class="fas fa-phone coord-icon"></i>
+      </a>
+    </div>
+
+  </div>
+
+</div>
+
+      <h2>Paper Presentation</h2>
       <div class="event-meta">
         <p><strong>Type:</strong>Technical Presentation Event</p>
         <p><strong>Team Size:</strong> Maximum 3 Members</p>
@@ -181,11 +210,15 @@
         </li>
       </div>
     </div>
-  <a href="../register.html">
-    <button class="register-btn">Register for this Event</button>
-  </a>
+  <div class="nav-buttons">
+        <a href="eleven.html">
+          <button class="register-btn">← Previous</button>
+        </a>
+        <a href="hackathon.html">
+          <button class="register-btn">Next →</button>
+        </a>
+      </div>
 </section>
-<div id="lightning-container"></div>
 <script defer src="../assets/main.js"></script>
 </body>
 </html>

@@ -4,22 +4,53 @@
   <title>Error 404: Upside Down </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../assets/event.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body class="debug-bg">
 
-<nav>
-  <strong>
-    <div class="nav-logo">
+<nav class="st-nav">
+  <div class="st-nav-inner">
+
+    <!-- Logo -->
+    <div class="st-logo">
       <img src="../assets/logo-removebg-preview.png" alt="VEC Logo">
     </div>
-  </strong>
-  <div>
-    <a href="../index.html">Home</a>
-    <a href="../events.html">Events</a>
+
+    <!-- Menu -->
+    <ul class="st-menu">
+      <li><a href="../index.html" class="active">Home</a></li>
+      <li><a href="../events.html">Event</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+
   </div>
 </nav>
 
 <section class="event-container">
+      <div class="coordinator-card">
+
+  <h3 class="coord-title">EVENT COORDINATORS</h3>
+
+  <div class="coord-list">
+
+    <div class="coord-item">
+      <span class="coord-name">Mr Rajakumar B</span>
+      <a href="tel:+919500156966" aria-label="Call Mr Rajakumar B">
+        <i class="fas fa-phone coord-icon"></i>
+      </a>
+    </div>
+
+    <div class="coord-item">
+      <span class="coord-name">Ms Jebisha J</span>
+      <a href="tel:+917448453227" aria-label="Call Ms Jebisha J">
+        <i class="fas fa-phone coord-icon"></i>
+      </a>
+    </div>
+
+  </div>
+
+</div>
+
       <h2>🧠 Error 404 In Upside Down</h2>
 
       <div class="event-meta">
@@ -74,11 +105,12 @@
         </ul>
       </div>
 
-      <a href="../register.html">
-        <button class="register-btn">Register for this Event</button>
-      </a>
+      <div class="nav-buttons">
+        <a href="hackathon.html">
+          <button class="register-btn">← Previous</button>
+        </a>
+      </div>
     </section>
-    <div id="lightning-container"></div>
     <script defer src="../assets/main.js"></script>
   </body>
 </html>
