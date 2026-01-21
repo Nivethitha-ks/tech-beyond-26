@@ -184,33 +184,33 @@ a {
   }
 
   .st-nav-inner {
-    gap: 8px;                  /* tighter spacing */
-    padding: 6px 10px;         /* smaller capsule */
-    border-radius: 40px;
+    gap: 6px;                  /* tighter spacing */
+    padding: 5px 9px;         /* smaller capsule */
+    border-radius: 38px;
   }
 
   /* Logo smaller */
   .st-logo img {
-    height: 26px;
+    height: 24px;
   }
 
   /* Menu tighter */
   .st-menu {
-    gap: 8px;
+    gap: 6px;
   }
 
   .st-menu a {
-    font-size: 0.75rem;
-    padding: 4px 8px;
-    letter-spacing: 0.5px;
+    font-size: 0.70rem;
+    padding: 3px 7px;
+    letter-spacing: 0.3px;
   }
 
   /* Register button compact */
   .st-register {
     padding: 5px 10px;
-    font-size: 0.75rem;
-    letter-spacing: 0.8px;
-    border-radius: 16px;
+    font-size: 0.70rem;
+    letter-spacing: 0.7px;
+    border-radius: 14px;
   }
 }
 
@@ -326,6 +326,25 @@ a {
   text-transform: uppercase;
   color: #ddd;
 }
+
+.sponser{
+  display:flex;
+  flex-wrap: wrap;
+  width: 330px;
+  justify-content: space-evenly;
+  margin-bottom: 25px;
+  font-size: 1rem;
+  letter-spacing: 4px;
+}
+.sponser p{
+  margin-bottom: 5px;
+}
+.sponser img{
+  height: 35px;
+  width: 83px; 
+  border-radius: 10px;
+} 
+
 .hero,
 .hero-content,
 .hero * {
@@ -870,7 +889,6 @@ h1 {
 .st-row-title {
   text-align: center;
   margin-left: 60px;
-  margin-bottom: 18px;
 }
 
 /* ================= CACHE PARAGRAPH ================= */
@@ -878,9 +896,9 @@ h1 {
 .event-cache {
   max-width: 900px;
   margin: 10px auto 25px auto;
-  padding: 0 20px;
+  padding: 0 10px;
   text-align: justify;
-
+  
   font-size: 1.05rem;
   line-height: 1.8;
   letter-spacing: 0.5px;
